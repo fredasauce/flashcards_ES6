@@ -1,0 +1,45 @@
+* {
+  text-align: center;
+}
+
+#scene {
+  display: flex;
+  justify-content: center;
+  background-color: none;
+}
+
+.card {
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  transition: all 1.0s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  border-radius: 15%;
+  border: 3px solid black;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  border-radius: 15%;
+  font-weight: bolder;
+  background-color: rgb(180, 247, 251);
+}
+
+.card__face--back {
+  text-align: center;
+  border-radius: 15%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  color: black;
+  background-color: rgb(180, 247, 251);
+}
